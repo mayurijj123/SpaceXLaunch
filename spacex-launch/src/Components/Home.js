@@ -208,10 +208,10 @@ const Home = (props) => {
                             value={year}
                             onClick={updateFilter}
                             name="launch_year"
-                            className={`focus:outline-none  text-white w-16 bg-green-500 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-1.5 mr-2 mb-2 dark:bg-green-500 dark:hover:bg-green-600 dark:focus:${
+                            className={` text-white w-16 font-medium rounded-lg text-sm px-5 py-1.5 mr-2 mb-2  ${
                               filter.launch_year === year.toString()
-                                ? "focus:ring-green-800"
-                                : ""
+                                ? "bg-red-400"
+                                : "bg-green-500"
                             }`}
                           >
                             {year}
@@ -228,30 +228,28 @@ const Home = (props) => {
                       </div>
                       <div className="mt-4 ml-4">
                         <button
-                          variant={
-                            filter.launch_success === "true"
-                              ? "success"
-                              : "outline-success"
-                          }
                           type="button"
                           name="launch_success"
                           value={true}
                           onClick={updateFilter}
-                          class="focus:outline-none mr-4 text-white w-16 bg-green-500 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-1.5 m-2 mb-2 dark:bg-green-500 dark:hover:bg-green-600 dark:focus:ring-green-700"
+                          className={` mr-4 text-white w-16 font-medium rounded-lg text-sm px-5 py-1.5 m-2 mb-2 ${
+                            filter.launch_success === "true"
+                              ? "bg-red-400"
+                              : "bg-green-500"
+                          }`}
                         >
                           True
                         </button>
                         <button
-                          variant={
-                            filter.launch_success === "false"
-                              ? "success"
-                              : "outline-success"
-                          }
                           type="button"
                           name="launch_success"
                           value={false}
                           onClick={updateFilter}
-                          class="focus:outline-none ml-6 text-white w-16 bg-green-500 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-1.5 m-2 mb-2 dark:bg-green-500 dark:hover:bg-green-600 dark:focus:ring-green-700"
+                          className={` mr-4 text-white w-16 font-medium rounded-lg text-sm px-5 py-1.5 m-2 mb-2 ${
+                            filter.launch_success === "false"
+                              ? "bg-red-400"
+                              : "bg-green-500"
+                          }`}
                         >
                           False
                         </button>
@@ -266,29 +264,28 @@ const Home = (props) => {
                       </div>
                       <div className="mt-4 ml-4">
                         <button
-                          variant={
-                            filter.launch_success === "true"
-                              ? "success"
-                              : "outline-success"
-                          }
                           type="button"
                           name="land_success"
                           value={true}
                           onClick={updateFilter}
-                          class="focus:outline-none mr-4 text-white w-16 bg-green-500 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-1.5 m-2 mb-2 dark:bg-green-500 dark:hover:bg-green-600 dark:focus:ring-green-700"
+                          className={` mr-4 text-white w-16 font-medium rounded-lg text-sm px-5 py-1.5 m-2 mb-2 ${
+                            filter.land_success === "true"
+                              ? "bg-red-400"
+                              : "bg-green-500"
+                          }`}
                         >
                           True
                         </button>
                         <button
-                          variant={
-                            filter.launch_success === "false"
-                              ? "success"
-                              : "outline-success"
-                          }
                           type="button"
                           name="land_success"
                           value={false}
-                          class="focus:outline-none ml-6 text-white w-16 bg-green-500 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-1.5 m-2 mb-2 dark:bg-green-500 dark:hover:bg-green-600 dark:focus:ring-green-700"
+                          onClick={updateFilter}
+                          className={` mr-4 text-white w-16 font-medium rounded-lg text-sm px-5 py-1.5 m-2 mb-2 ${
+                            filter.land_success === "false"
+                              ? "bg-red-400"
+                              : "bg-green-500"
+                          }`}
                         >
                           False
                         </button>
@@ -300,7 +297,7 @@ const Home = (props) => {
             </div>
             <div>
               <div className="flex-1  bg-gray-200  ">
-                <div className="grid grid-cols-4 grid-rows-6 ml-72 mt-28 ">
+                <div className="grid grid-cols-4 grid-rows-6 ml-80 mt-28 ">
                   {data &&
                     data.map((element) => {
                       return (
